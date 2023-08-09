@@ -1,0 +1,11 @@
+<?php 
+  $servidor =  "localhost";
+  $usuario = "juliano";
+  $senha = "";
+  $banco = "livros";
+
+  $con = mysqli_connect($servidor, $usuario, $senha, $banco);
+  $res = mysqli_query($con, "SELECT titulo,autor, FROM livros");
+  $num_livros = mysqli_num_rows($res);
+  echo "Existe $num_livros livros cadastrados no sistema."
+?>

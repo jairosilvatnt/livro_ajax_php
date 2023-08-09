@@ -1,0 +1,36 @@
+<!-- Para manipulação de botões raido, temos à disposição o atributo 'length', que 
+contém o número de botões radio que fazem parte do grupo. Cada botão equivale a uma posição no vetor relativo a esse grupo, iniciando no indice zero.
+
+Como exemplo, o script a seguir altera a cor de fundo da página de acordo com o botão radio selecionado:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interativa com ajax e PHP</title>
+    <script language="javascript">
+      function trocaCor(){
+        var i ;
+        for (i = 0; i < document.form.cor.length; i++){
+          if (document.form.cor[i].checked){
+            break;
+          }
+        }
+        document.bgColor = document.form.cor[i].value;
+      }
+    </script>
+  </head>
+  <body>
+      <form name="form">
+        <input type="radio" name="cor" value="FFFFFF" onclick="trocaCor()">Branco<br>
+        <input type="radio" name="cor" value="FF0000" onclick="trocaCor()">Vermlho<br>
+        <input type="radio" name="cor" value="00FF00" onclick="trocaCor()">Verde<br>
+        <input type="radio" name="cor" value="0000FF" onclick="trocaCor()">Azul<br>
+        <input type="radio" name="cor" value="000000" onclick="trocaCor()">Preto<br>
+      </form>
+  </body>
+</html>
+
+<!-- Note que o atributo 'onClick' foi colocado no próprio botão radio, e não em um campo do tipo button, como nos exemplos anteriores. -->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interativa com ajax e PHP</title>
+    <script linguagem="javascript">
+      function Verificar(){
+        if(document.formulario.aceitar.checked==false){
+          alert("Você deve aceitar os termos do contrato!")
+        }else{
+          alert("Concluido!")
+        }
+      }
+    </script>
+  </head>
+  <body>
+      <form name="formulario">
+        <h1>O que é Lorem Ipsum?</h1>
+        <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma galera de tipos e os embaralhou para fazer um livro de espécimes de tipos. Ele sobreviveu não apenas a cinco séculos, mas também ao salto para a composição eletrônica, permanecendo essencialmente inalterado. Foi popularizado na década de 1960 com o lançamento de folhas Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoração eletrônica como Aldus PageMaker, incluindo versões de Lorem Ipsum.</p>
+        <input type="checkbox" name="aceitar" value="sim">Aceitar o Contrato<br>
+        <input type="button" value="Prosseguir" onclick="Verificar()">
+      </form>
+  </body>
+</html>
+
+<!-- Em relação aos métodos que podem ser invocados em um checkbox, além do blur() e focus(), 
+temos o método click(). Por exemplo, se executamos a linha a seguir, estaremos simulando um click na checkbox.
+  document.formulario.aceitar.click(); -->

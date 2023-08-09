@@ -1,0 +1,28 @@
+<!-- Podemos interagir com usuários por meio de comando como 'alert','confirm' e 
+'prompt'. O alert serve simplismente para exibir uma mensagem. O confirm exibe uma mensagem e oferece dois botões para que o usuário confirme ou cancele a ação.
+Se o botão de confirmação foi clicado, retorna verdadeiro. O prompt exibe uma mensagem e solicita a digitação de algum dado.
+
+Os comandos alert e confirm recem como parâmetro apenas a mensagem a ser exibida , enquanto o comando prompt pode receber também um valor inicial para a caixa de texto. Veja exemplos  de utilização no script a seguir:
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interativa com ajax e PHP</title>
+    <script language="javascript">
+      function teste(){
+        alert("Seja bem-vindo ao treinamendo do livro de ajax e PHP!");
+        if (confirm("Deseja continuar? ")) {
+          var nome = prompt("Digite seu nome: ");
+          document.write("Olá " + nome + "! Obrigado por visitar meu site! ");
+        }
+      }
+    </script>
+  </head>
+  <body onload="teste()">
+
+  </body>
+</html>

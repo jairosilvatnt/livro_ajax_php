@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interativa com ajax e PHP</title>
+    <script>
+      var ajax ; 
+      function IniciarAjax(){
+        var ajax;
+        if (window.XMLHttpRequest){
+          ajax = new XMLHttpRequest();
+        }else if(window.ActiveXObject){
+          ajax = new ActiveXObject("Msxml12.XMLHTTP");
+          if(!ajax){
+            ajax = new ActiveXObject("Microsoft.XMLHTTP");
+          }          
+        }
+        else {
+          alert("Seu navegador não possui suporte a essa aplicação!");
+        }
+        return ajax;
+      }
+
+      function Processa(){
+        ajax = IniciarAjax();
+        if(ajax){
+          ajax.onreadystatechange = function(){
+            if (ajax.readyState == 4) {
+              if (ajax.status == 200) {
+                document.getElementById("resultado").value = ajax.responseText;
+              }else{
+                alert(ajax.statusText);
+              }
+            }
+          }
+          nome = document.getElementById("nome").value;
+          valor = document.getElementById("valor").value;
+
+          // monta a QueryString
+          dados = 'nome='+nome+"&valor="+valor;
+
+          // faz a requisição e envia pelo método POST
+          ajax.open('POST', 'processa.php',true);
+          ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          ajax.send(dados);
+        }        
+      }
+    </script>
+  </head>
+  <body>
+      <form name="form1" method="post" action="">
+        Nome: <input type="text" name="nome" id="nome" value="Juliano"><br>
+        Digite um valor: <input type="text" name="valor" id="valor" value="3"><br>
+        <button type="button" onclick="Processa()">Processar</button>
+        <hr>Resultado: <input type="text" id="resultado" readonly="true" size="60">
+      </form>
+  </body>
+</html>

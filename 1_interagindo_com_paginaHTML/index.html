@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interativa com ajax e PHP</title>
+    <script language="javascript">
+        function MostraTabela(cor){
+            document.write("<table bgcolor=\"" + cor + "\" border= \"1\">");
+            document.write("<tr><td>");
+            if( cor == 'blue'){
+              document.write("O fundo desta tabela é azul");
+            }else if(cor == 'red'){
+              document.write("O fundo desta tabela é vermelho");
+            }  
+            document.write("</td></tr>");
+            document.write("</table>");  
+        } 
+        function selecionarFocar(){
+          document,formulario.numero.focus();
+          document.formulario.numero.select();
+        }
+    </script>
+  </head>
+  <body>
+      <p><a href="#" onclick="MostraTabela('blue');">Tabela azul</a></p>
+      <p><a href="#" onclick="MostraTabela('red');">Tabela vermelha</a></p>
+  </body>
+</html>

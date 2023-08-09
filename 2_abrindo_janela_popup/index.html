@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interativa com ajax e PHP</title>
+    <script linguage="javascript">
+        function JanelaAviso(){
+          janela = window.open('', 'cadastro', 'width=50,heigth=50,toolbar=no,locatin=no,status=no,scrollbars=no,resizable=no');
+          janela.document.write("<p>Para acessar o site você precisa se cadastrar!</p>");
+          janela.document.write("<p><a href='javascript:window.close();'>Fechar</a></p>");
+        }
+
+    </script>
+  </head>
+  <body>
+    <p><a href="#" onclick="JanelaAviso();">Acessar o site</a></p>
+  </body>
+</html>
