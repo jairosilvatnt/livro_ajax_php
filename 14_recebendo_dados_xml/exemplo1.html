@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www3.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="bibliotecaAjax.js"></script>
+    <script type="text/javascript" src="exemplo1.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interativa com ajax e PHP</title>
+    
+  </head>
+  <body>
+    <h2>Preencha o formul&aacute;rio</h2>
+    <form action="javascript:void%200" onSubmit="enviaDados('exemplo1.php'); return false">
+      <p>Nome: <input type="text" name="nome" id="nome" size="50"></p>
+      <p>Cidade: <input type="text" name="cidade" id="cidade" size="40"></p>
+      <p>Estado: <input type="text" name="" id="" size=""></p>
+      <p>Pais: <input type="text" name="estado" id="estado" size="2"></p>
+      <p><input type="submit" name="Consultar" value="Enviar"></p>
+    </form>
+    <hr><span id="campoResposta"></span>
+  </body>
+</html>

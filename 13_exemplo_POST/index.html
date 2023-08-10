@@ -6,12 +6,12 @@
     <title>Web Interativa com ajax e PHP</title>
     <script>
       var ajax ; 
-      function IniciarAjax(){
+      function IniciaAjax(){
         var ajax;
         if (window.XMLHttpRequest){
           ajax = new XMLHttpRequest();
         }else if(window.ActiveXObject){
-          ajax = new ActiveXObject("Msxml12.XMLHTTP");
+          ajax = new ActiveXObject("Msxml2.XMLHTTP");
           if(!ajax){
             ajax = new ActiveXObject("Microsoft.XMLHTTP");
           }          
@@ -23,7 +23,7 @@
       }
 
       function Processa(){
-        ajax = IniciarAjax();
+        ajax = IniciaAjax();
         if(ajax){
           ajax.onreadystatechange = function(){
             if (ajax.readyState == 4) {
