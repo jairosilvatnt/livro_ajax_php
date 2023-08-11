@@ -10,11 +10,15 @@ function requisicaoHTTP(tipo,url,assinc){
     ajax = new ActiveXObject("Msxml2.XMLHTTP");
     if(!ajax){
       ajax = new ActiveXObject("Microsoft.XMLHTTP");
-    }          
+    }
+    if(ajax){
+      iniciaRequisicao(tipo,url,assinc);
+    }else {
+      alert("Seu navegador não possui suporte a essa aplicação!");
+    }
+    
   }
-  else {
-    alert("Seu navegador não possui suporte a essa aplicação!");
-  }
+  
 
   // --------- Inicializa o objeto criando e envia os dados (se existirem)---------
 

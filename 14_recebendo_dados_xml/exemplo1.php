@@ -1,12 +1,12 @@
 <?php 
   $gmtDate = gmdate("D,d M Y H:i:s");
-  header("Experies: {$gmtDate} GMT");  
+  header("Expires: {$gmtDate} GMT");  
   header("Last-Modified: {$gmtDate} GMT");
   header("Cache-Control: no-cache, must-revalidate");
   header("Pragma: no-cache");
 
   // obtendo os dados do formulario
-  $nome =  $_POST["nome"];
+  $nome = $_POST["nome"];
   $cidade = $_POST["cidade"];
   $estado = $_POST["estado"];
   $pais = $_POST["pais"];

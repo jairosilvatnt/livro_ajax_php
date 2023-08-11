@@ -5,13 +5,13 @@ function trataDados(){
   var nodos;
 
   if (raiz.hasChildNodes()) {
-    nodos = raiz.hasChildNodes;
-    for(var i = 0; i < nodes.length; i++){
+    nodos = raiz.childNodes;
+    for(var i = 0; i < nodos.length; i++){
       info += nodos[i].nodeName+" - ";
-      if (nodes[i].hasChildNodes()) {
+      if (nodos[i].hasChildNodes()){
         info += nodos[i].firstChild.nodeValue+"<br>";      
       }else{
-        info += "Vazio<br>";
+        info += "Vazio <br>";
       }
     }
     document.getElementById("campoResposta").style.backgroundColor="yellow";
